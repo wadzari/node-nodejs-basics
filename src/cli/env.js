@@ -1,5 +1,11 @@
+import { argv } from 'node:process'
+
 const parseEnv = () => {
-  // Write your code here
+  argv.forEach((arg) => {
+    if (arg.startsWith('RSS_')) {
+      console.log(arg)
+    }
+  })
 };
 
 parseEnv();
